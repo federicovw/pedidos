@@ -49,7 +49,7 @@ public class OpinionController {
     }
 
     @PostMapping("/opinions/search")
-    public ResponseEntity<Object> getOpinionsForShop(@RequestBody OpinionFilter opinionFilter) {
+    public ResponseEntity<Object> getOpinions(@RequestBody OpinionFilter opinionFilter) {
         List<Opinion> opinions;
         try {
             opinions = opinionService.getOpinions(opinionFilter);
